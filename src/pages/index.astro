@@ -1,15 +1,47 @@
 ---
-import { Font } from "astro:assets"
-
+import { Font } from "astro:assets";
 ---
+
 <style>
 	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
 	}
-</style>
 
+	.main-view {
+		background-color: black;
+		width: 100vw;
+		height: 100vh;
+		.hero {
+			display: flex;
+			flex-direction: row;
+			height: 100%;
+			.slides{
+				padding: 40px;
+				display: flex;
+				flex-direction: column;
+				justify-content: end;
+				flex: 0 0 100%;
+
+			}
+			.slide-1{
+				background-color: yellow;
+			}
+			.slide-2{
+				background-color: blue;
+			}
+			.slide-3{
+				background-color: orange;
+			}
+
+		}
+	}
+	h1 {
+		color: white;
+		font-family: var(--font-switzer);
+	} 	
+</style>
 
 <html lang="en">
 	<head>
@@ -22,8 +54,26 @@ import { Font } from "astro:assets"
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>URBANIKE</h1>
+		<section class="main-view">
+			<div class="intro" style="display: none">
+				<h1>INI INTRO</h1>
+			</div>
+			<div class="hero">
+				<div class="slides slide-1">
+					<h1>Bike</h1>
+				</div>
+				<div class="slides slide-2">
+									<h1>Electric Bike</h1>
+				</div>
+
+				<div class="slides slide-3">
+					<h1>Motorcycle</h1>
+				</div>
+				<div class="slides slide-4">
+					<h1>Vespa</h1>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
-<script>
-</script>
+<script></script>
