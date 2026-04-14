@@ -58,7 +58,7 @@ import { Font } from "astro:assets";
 			<div class="intro" style="display: none">
 				<h1>INI INTRO</h1>
 			</div>
-			<div class="hero">
+			<div data-scroll-orientation="horizontal"  class="hero">
 				<div class="slides slide-1">
 					<h1>Bike</h1>
 				</div>
@@ -76,4 +76,17 @@ import { Font } from "astro:assets";
 		</section>
 	</body>
 </html>
-<script></script>
+<script>
+
+	//@ts-nocheck
+
+	import LocomotiveScroll from 'locomotive-scroll';
+	
+	const scroll = new LocomotiveScroll({
+		lenisOptions:{
+			orientation: 'horizontal'
+		}
+	})
+
+
+</script>
