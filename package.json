@@ -14,5 +14,8 @@
   "dependencies": {
     "astro": "^6.1.6",
     "locomotive-scroll": "^5.0.1"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.99.0"
   }
 }
