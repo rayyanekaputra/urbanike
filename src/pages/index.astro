@@ -16,6 +16,7 @@ import '../styles/importExternals.scss';
     background-color: black;
     width: 100vw;
     height: 100vh;
+	overflow-x: auto;
 
     .hero {
         display: flex;
@@ -68,7 +69,7 @@ h1 {
 			<div class="intro" style="display: none">
 				<h1>INI INTRO</h1>
 			</div>
-			<div data-scroll-orientation="horizontal"  class="hero">
+			<div 	class="hero">
 				<div class="slides slide-1">
 					<h1>Bike</h1>
 				</div>
@@ -83,6 +84,28 @@ h1 {
 					<h1>Vespa</h1>
 				</div>
 			</div>
+			
+		</section>
+		<section class="main-view">
+			<div class="intro" style="display: none">
+				<h1>INI INTRO</h1>
+			</div>
+			<div 	class="hero">
+				<div class="slides slide-1">
+					<h1>Bike</h1>
+				</div>
+				<div class="slides slide-2">
+									<h1>Electric Bike</h1>
+				</div>
+
+				<div class="slides slide-3">
+					<h1>Motorcycle</h1>
+				</div>
+				<div class="slides slide-4">
+					<h1>Vespa</h1>
+				</div>
+			</div>
+			
 		</section>
 	</body>
 </html>
@@ -92,9 +115,16 @@ h1 {
 
 	import LocomotiveScroll from 'locomotive-scroll';
 	
-	const scroll = new LocomotiveScroll({
+	const scrollHorizontal = new LocomotiveScroll({
 		lenisOptions:{
-			orientation: 'horizontal'
+			wrapper: document.querySelector('.main-view'),
+			orientation:'horizontal'
+		}
+	})
+	const scrollVertical = new LocomotiveScroll({
+		lenisOptions:{
+			wrapper: window,
+			orientation:'vertical'
 		}
 	})
 
