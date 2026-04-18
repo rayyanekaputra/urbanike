@@ -90,64 +90,47 @@ import Sepeda4 from "../assets/images/streetsh-vZAk_n9Plfc-unsplash.jpg"
 			<div class="intro" style="display: none">
 				<h1>INI INTRO</h1>
 			</div>
-			<div 	class="hero">
+			<div class="hero">
 				<div class="slides slide-1">
 					<h1>Bike</h1>
+					<Image class="slides-img" src={Sepeda1} alt="orang naik sepeda"/>
+
 				</div>
 				<div class="slides slide-2">
-									<h1>Electric Bike</h1>
+					<h1>Electric Bike</h1>
+					<Image class="slides-img" src={Sepeda2} alt="orang naik sepeda"/>
+
 				</div>
 
 				<div class="slides slide-3">
 					<h1>Motorcycle</h1>
-				</div>
-				<div class="slides slide-4">
-					<h1>Vespa</h1>
-				</div>
-			</div>
-			
-		</section>
-		<section class="main-view">
-			<div class="intro" style="display: none">
-				<h1>INI INTRO</h1>
-			</div>
-			<div 	class="hero">
-				<div class="slides slide-1">
-					<h1>Bike</h1>
-				</div>
-				<div class="slides slide-2">
-									<h1>Electric Bike</h1>
-				</div>
+					<Image class="slides-img" src={Sepeda3} alt="orang naik sepeda"/>
 
-				<div class="slides slide-3">
-					<h1>Motorcycle</h1>
 				</div>
 				<div class="slides slide-4">
 					<h1>Vespa</h1>
+					<Image class="slides-img" src={Sepeda4} alt="orang naik sepeda"/>
+
 				</div>
 			</div>
-			
 		</section>
 	</body>
 </html>
 <script>
-
 	//@ts-nocheck
 
-	import LocomotiveScroll from 'locomotive-scroll';
-	
+	import LocomotiveScroll from "locomotive-scroll";
+
 	const scrollHorizontal = new LocomotiveScroll({
-		lenisOptions:{
-			wrapper: document.querySelector('.main-view'),
-			orientation:'horizontal'
-		}
-	})
+		lenisOptions: {
+			wrapper: document.querySelector(".main-view"),
+			orientation: "horizontal",
+		},
+	});
 	const scrollVertical = new LocomotiveScroll({
-		lenisOptions:{
+		lenisOptions: {
 			wrapper: window,
-			orientation:'vertical'
-		}
-	})
-
-
+			orientation: "vertical",
+		},
+	});
 </script>
