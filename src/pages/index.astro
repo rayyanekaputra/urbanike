@@ -3,12 +3,10 @@
 import { Font } from "astro:assets";
 import "../styles/importExternals.scss";
 import { Image } from "astro:assets";
-import Sepeda1 from "../assets/images/daniel-salcius-RRcYcdGY630-unsplash.jpg"
-import Sepeda2 from "../assets/images/jonny-kennaugh-nPOtzvGLYW0-unsplash.jpg"
-import Sepeda3 from "../assets/images/murillo-de-paula-o2FCfhNSjPo-unsplash.jpg"
-import Sepeda4 from "../assets/images/streetsh-vZAk_n9Plfc-unsplash.jpg"
-
-
+import Sepeda1 from "../assets/images/daniel-salcius-RRcYcdGY630-unsplash.jpg";
+import Sepeda2 from "../assets/images/jonny-kennaugh-nPOtzvGLYW0-unsplash.jpg";
+import Sepeda3 from "../assets/images/murillo-de-paula-o2FCfhNSjPo-unsplash.jpg";
+import Sepeda4 from "../assets/images/streetsh-vZAk_n9Plfc-unsplash.jpg";
 ---
 
 <style>
@@ -31,11 +29,14 @@ import Sepeda4 from "../assets/images/streetsh-vZAk_n9Plfc-unsplash.jpg"
 			flex-direction: row;
 			height: 100%;
 
-			h1{
+			.slides-text {
 				z-index: 3;
 				margin-left: 40px;
+				margin-right: 40px;
 				margin-top: 480px;
-				font-size: 60px;
+				h1 {
+					font-size: 60px;
+				}
 			}
 			.slides {
 				display: flex;
@@ -45,33 +46,35 @@ import Sepeda4 from "../assets/images/streetsh-vZAk_n9Plfc-unsplash.jpg"
 			}
 
 			.slide-1 {
-				background-color: yellow;
+				background-color: black;
 			}
 
 			.slide-2 {
-				background-color: blue;
+				background-color: black;
 			}
 
 			.slide-3 {
-				background-color: orange;
+				background-color: black;
 			}
 			.slide-4 {
-				background-color: red;
+				background-color: black;
 			}
-			.slides-img{
+			.slides-img {
 				width: 100%;
 				height: 200%;
 				object-fit: cover;
 				z-index: 0;
 				margin-top: -800px;
+				opacity: 0.8;
 			}
 		}
 	}
 
-	h1 {
+	h1,p {
 		color: white;
 		font-family: var(--font-switzer);
 		z-index: 1;
+		line-height: 60px;
 	}
 </style>
 
@@ -92,25 +95,49 @@ import Sepeda4 from "../assets/images/streetsh-vZAk_n9Plfc-unsplash.jpg"
 			</div>
 			<div class="hero">
 				<div class="slides slide-1">
-					<h1>Bike</h1>
-					<Image class="slides-img" src={Sepeda1} alt="orang naik sepeda"/>
-
+					<div class="slides-text">
+						<h1>Park your bike wherever you like.</h1>
+						<p>You can track your bike.</p>
+					</div>
+					<Image
+						class="slides-img"
+						src={Sepeda1}
+						alt="orang naik sepeda"
+					/>
 				</div>
 				<div class="slides slide-2">
-					<h1>Electric Bike</h1>
-					<Image class="slides-img" src={Sepeda2} alt="orang naik sepeda"/>
-
+					<div class="slides-text">
+						<h1>Biking through the city.</h1>
+						<p>Do it fun, do it better.</p>
+					</div>
+					<Image
+						class="slides-img"
+						src={Sepeda2}
+						alt="orang naik sepeda"
+					/>
 				</div>
 
 				<div class="slides slide-3">
-					<h1>Motorcycle</h1>
-					<Image class="slides-img" src={Sepeda3} alt="orang naik sepeda"/>
-
+					<div class="slides-text">
+						<h1>Summer has never been this productive.</h1>
+						<p>Ride with pride. Use our app to track your journey.</p>
+					</div>
+					<Image
+						class="slides-img"
+						src={Sepeda3}
+						alt="orang naik sepeda"
+					/>
 				</div>
 				<div class="slides slide-4">
-					<h1>Vespa</h1>
-					<Image class="slides-img" src={Sepeda4} alt="orang naik sepeda"/>
-
+					<div class="slides-text">
+						<h1>Easy maintenance, zero hussle.</h1>
+						<p>Our alloys are high-quality. Welded with precision and crafts.</p>
+					</div>
+					<Image
+						class="slides-img"
+						src={Sepeda4}
+						alt="orang naik sepeda"
+					/>
 				</div>
 			</div>
 		</section>
